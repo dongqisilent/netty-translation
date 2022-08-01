@@ -332,6 +332,7 @@
 
     <module>microbench</module>
     <module>bom</module>
+      <module>mydemo</module>
   </modules>
 
   <dependencyManagement>

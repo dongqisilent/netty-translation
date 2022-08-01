@@ -540,6 +540,13 @@ public final class NioEventLoop extends SingleThreadEventLoop {
 
                 cancelledKeys = 0;
                 needsToSelectAgain = false;
+                /***
+                 *
+                 * ioRatio 为io线程所占的比例，如果设置100，那么执行全部io之后才执行任务
+                 * 如果设置为50，先执行io，然后执行相同时间任务
+                 *
+                 *
+                 */
                 final int ioRatio = this.ioRatio;
                 if (ioRatio == 100) {
                     try {
